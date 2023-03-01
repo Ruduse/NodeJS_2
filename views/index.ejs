@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Danh sách Môn Học</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Danh sách Môn Học</h1>
+    <a href="/form-add"><button>Thêm lớp</button></a><br>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>MaMH</th>
+        <th>TenMH</th>
+        <th>Mô tả</th>
+        <th>hành động</th>
+      </tr>
+      <% Subjects.forEach(item =>{ %>
+        <tr>
+          <td><%= item._id %></td>
+          <td><%= item._MaMH %></td>
+          <td><%= item._TenMH %></td>
+          <td><%= item._description  %></td>
+          <td><a href="/form-update/<%= item.id %>">Update</a> || <a href="/form-delete/<%= item._id %>">Delete</a></td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>

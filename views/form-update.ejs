@@ -1,0 +1,9 @@
+<h1>Sửa Môn học</h1>
+
+<form action="/update" method="POST">
+    ID: <input type="text" name="ID" value="<%= Subject.id  %>"><br>
+    MaMH: <input type="text" name="MaMH" value="<%= Subject.MaMH  %>"><br>
+    TenMH: <input type="text" name="TenMH" value="<%= Subject.TenMH  %>"><br>
+    description: <input type="text" name="description" value="<%= Subject.description  %>"><br>
+    <button type="submit">sửa môn học</button>
+</form>
